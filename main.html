@@ -11,23 +11,23 @@
 		function secondHighest(arr) {
 			//Write your code here
 			if (arr.length<=1) {
-				return -infinity;
+				return -Infinity;
 			}
-			let highest = -infinity;
-			let secondHighest = -infinity;
+			let highest = -Infinity;
+			let secondHighest = -Infinity;
 			arr.forEach(num => {
 				if( num > highest ){
 					secondHighest = highest;
 					highest = num;
 				}
-				else if (num > highest && num < secondHighest) {
+				else if (num < highest && num > secondHighest) {
 					secondHighest = num;
 				}
 				
 			})
 			return secondHighest;
-			 if ( secondHighest === -infinity ) {
-			 	return -infinity;
+			 if ( secondHighest === -Infinity ) {
+			 	return -Infinity;
 			 }
 		}
 
